@@ -149,9 +149,17 @@ const WorkList: React.FC<WorklistProps> = ({ fulfillerStatus }) => {
         },
         patient: {
           content: (
+<<<<<<< HEAD
             <>
               <span>{entry.patient.display.split("-")[1]}</span>
             </>
+=======
+            <ConfigurableLink
+              to={`\${openmrsSpaBase}/patient/${entry.patient.uuid}/chart/laboratory-orders`}
+            >
+              {entry.patient.display.split("-")[1]}
+            </ConfigurableLink>
+>>>>>>> ccb70bf (add numeric value ranges for numeric tests)
           ),
         },
         orderNumber: { content: <span>{entry.orderNumber}</span> },
